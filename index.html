@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>AR.js Test</title>
+    <title>AR.js</title>
 </head>
 
 <!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
@@ -13,10 +13,17 @@
 	<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>
         <a-marker id="marker" markerhandler emitevents ="true" cursor="rayOrigin: mouse" type="pattern" url="patt/son.patt">
                         
-                        <a-plane class="image" src="img/son.jpg" height="2" width="1.5" color="white" position="0 1 0" rotation="-90 0 0"></a-plane>
+            <a-plane class="image" src="img/son.jpg" height="2" width="1.5" color="white" position="0 1 0" rotation="-90 0 0"></a-plane>
                       
         <!-- <a-marker-camera preset='hiro'></a-marker-camera> -->
         </a-marker>
-                    <a-entity camera></a-entity>
+
+        <a-marker id="marker" markerhandler emitevents ="true" cursor="rayOrigin: mouse" type="pattern" url="patt/gift.patt">
+                        
+            <a-plane class="image" src="img/anniv.png" height="2" width="2" color="white" position="0 1 0" rotation="-90 0 0"></a-plane>
+                      
+        </a-marker>
+        
+        <a-entity camera></a-entity>
 	</a-scene>
 </body>

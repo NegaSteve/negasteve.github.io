@@ -45,9 +45,11 @@
 
         <!-- video assets -->
         <a-assets>
-            <video id="vid" loop="true" crossorigin="anonymous" 
-                   src='img/720p00012.mp4'></video>
+            <!-- <video id="vid" loop="true" crossorigin="anonymous" 
+                   src='img/720p00012.mp4'></video> -->
+            <video preload="auto" id="vid" autoplay loop="true" crossorigin webkit-playsinline playsinline controls src="https://negasteve.github.io/img/720p00012.mp4"></video>
             <!-- <video id="videonew" loop="true" crossorigin="anonymous" 
+                
                    src=''></video> -->
         </a-assets>
 
@@ -70,7 +72,8 @@
         </a-marker>
 
         <a-marker preset="pattern" vidhandler type="pattern" url="patt/ultrasound.patt">
-            <a-box position="-1 0 0" material='src: #vid'></a-box>
+            <!-- <a-box position="-1 0 0" material='src: #vid'></a-box> -->
+            <a-video src="#vid" width="1" height="1" position="0 0.5 0" rotation="-90 0 0"></a-video>
             <!-- <a-entity scale="1 1 1" rotation="-90 0 0">
               <a-video play-on-scan src="img/720p00012.mp4"></a-video>
             </a-entity> -->
